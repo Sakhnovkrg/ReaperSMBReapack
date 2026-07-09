@@ -12,6 +12,19 @@ REQUIRES ReaImGui (install "ReaImGui: ReaScript binding for Dear ImGui" via ReaP
 After install, restart REAPER. The action "SMB: Toggle media browser" appears in the Actions list.]]></description>
         <link rel="website" href="https://dsgdnb.com/reaper-media-browser">DsgDnB</link>
       </metadata>
+      <version name="0.5.1" author="DsgDnB" time="2026-07-09T00:00:00Z">
+<changelog><![CDATA[
+- Linux: Fixed an issue where SMB could fail to detect ReaImGui even when it was installed.
+- Linux: Add Folder no longer depends on zenity and now uses REAPER's built-in folder picker.
+- Dragging a file into the arrange while SMB is docked now correctly returns keyboard focus to REAPER.
+- MIDI files no longer display BPM parsed from their filename.
+- Reduced occasional preview stutter by lowering the priority of background waveform/BPM analysis.
+]]></changelog>
+        <source platform="win64" file="reaper_smb.dll">https://github.com/sakhnovkrg/ReaperSMBReapack/releases/download/v0.5.1/reaper_smb-x64.dll</source>
+        <source platform="darwin-arm64" file="reaper_smb.dylib">https://github.com/sakhnovkrg/ReaperSMBReapack/releases/download/v0.5.1/reaper_smb-arm64.dylib</source>
+        <source platform="darwin64" file="reaper_smb.dylib">https://github.com/sakhnovkrg/ReaperSMBReapack/releases/download/v0.5.1/reaper_smb-x86_64.dylib</source>
+        <source platform="linux64" file="reaper_smb.so">https://github.com/sakhnovkrg/ReaperSMBReapack/releases/download/v0.5.1/reaper_smb-x64.so</source>
+      </version>
       <version name="0.5.0" author="DsgDnB" time="2026-07-07T00:00:00Z">
         <changelog><![CDATA[Initial release.]]></changelog>
         <source platform="win64" file="reaper_smb.dll">https://github.com/sakhnovkrg/ReaperSMBReapack/releases/download/v0.5.0/reaper_smb-x64.dll</source>
