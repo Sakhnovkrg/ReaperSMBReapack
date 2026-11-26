@@ -12,6 +12,31 @@ REQUIRES ReaImGui (install "ReaImGui: ReaScript binding for Dear ImGui" via ReaP
 After install, restart REAPER. The action "SMB: Toggle media browser" appears in the Actions list.]]></description>
         <link rel="website" href="https://dsgdnb.com/reaper-media-browser">DsgDnB</link>
       </metadata>
+      <version name="0.6.0" author="DsgDnB" time="2026-11-27T00:00:00Z">
+<changelog><![CDATA[
+- Drag a fragment out of the waveform: select a region and drag from inside it to drop just that slice into the project or a sampler.
+- Playback follows the waveform selection: drawing a selection plays it, Play plays just the selection, and Loop loops it sample-accurately — even while you move its edges.
+- New "Skip leading silence" option (on by default): previews start where the sound starts.
+- Search box is now right on the toolbar — just start typing.
+- Search results can be grouped by folder (on by default); double-click a folder header to open it in the tree.
+- New All / Audio / MIDI filter in search.
+- Search stays fast on huge libraries.
+- Redrawn waveform: exact at any zoom level down to individual samples, with an optional split L/R stereo view.
+- Faster spectral waveform colouring; palette changes apply instantly.
+- ÷2 / ×2 buttons next to the BPM fix a tempo detected at half or double speed (shown while Sync is on).
+- Click a BPM or note badge taken from the file name to detect it from the audio instead.
+- New "Apply preview volume on insert" option, also applied to Cartridge as Gain.
+- Space now stops the sample preview first, then the project.
+- The folder tree stays smooth with thousands of files.
+- The footer adapts to narrow windows.
+- New "SMB: Undock window" action, and the browser now recovers automatically when docked into a docker squeezed to zero height.
+- Fixed a "tail" on loops dropped into the project with Sync on.
+]]></changelog>
+        <source platform="win64" file="reaper_smb.dll">https://github.com/sakhnovkrg/ReaperSMBReapack/releases/download/v0.6.0/reaper_smb-x64.dll</source>
+        <source platform="darwin-arm64" file="reaper_smb.dylib">https://github.com/sakhnovkrg/ReaperSMBReapack/releases/download/v0.6.0/reaper_smb-arm64.dylib</source>
+        <source platform="darwin64" file="reaper_smb.dylib">https://github.com/sakhnovkrg/ReaperSMBReapack/releases/download/v0.6.0/reaper_smb-x86_64.dylib</source>
+        <source platform="linux64" file="reaper_smb.so">https://github.com/sakhnovkrg/ReaperSMBReapack/releases/download/v0.6.0/reaper_smb-x64.so</source>
+      </version>
       <version name="0.5.1" author="DsgDnB" time="2026-07-09T00:00:00Z">
 <changelog><![CDATA[
 - Linux: Fixed an issue where SMB could fail to detect ReaImGui even when it was installed.
